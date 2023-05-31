@@ -1,0 +1,9 @@
+interface ComponentNameProps {
+
+} 
+export function ComponentName(props : ComponentNameProps) {
+    
+    return(
+        <></>
+    )
+}
