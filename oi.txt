@@ -7,3 +7,8 @@ export function ComponentName(props : ComponentNameProps) {
         <></>
     )
 }
+ "styled-components": "^5.3.11",
+ "@types/styled-components": "^5.1.26",
+ next.config.js -> compiler: {
+        styledComponents : true
+    }
