@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ItemLi from "./Item-li";
+import ItemLi from "./li-item";
 import useFilter from "@/hooks/useFilter";
 import { FilterType } from "@/types/filter-types";
 
@@ -15,15 +15,15 @@ const UlItems = styled.ul`
 
 function FilterByType() {
     const {type, setType } = useFilter()
-const handleChangeType = (value: FilterType) => {
-    setType(value)
-}
+    const handleChangeType = (value: FilterType) => {
+        setType(value)
+    }
 
     return (
         <UlItems>
-            <ItemLi selected={type === FilterType.ALL} onClick={() => handleChangeType(FilterType.ALL)}>Todos os Produtos</ItemLi>
-            <ItemLi selected={type === FilterType.SHIRT} onClick={() => handleChangeType(FilterType.SHIRT)}>Camisetas</ItemLi>
-            <ItemLi selected={type === FilterType.MUG} onClick={() => handleChangeType(FilterType.MUG)}>Canecas</ItemLi>
+            <ItemLi textTransform="uppercase" size={'16px'} selected={type === FilterType.ALL} onClick={() => handleChangeType(FilterType.ALL)}>Todos os Produtos</ItemLi>
+            <ItemLi textTransform="uppercase" size={'16px'} selected={type === FilterType.SHIRT} onClick={() => handleChangeType(FilterType.SHIRT)}>Camisetas</ItemLi>
+            <ItemLi textTransform="uppercase" size={'16px'} selected={type === FilterType.MUG} onClick={() => handleChangeType(FilterType.MUG)}>Canecas</ItemLi>
         </UlItems>
     );
 }
