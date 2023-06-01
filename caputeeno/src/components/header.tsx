@@ -1,7 +1,6 @@
 "use client"
 
 import styled from "styled-components";
-import { useEffect } from 'react'
 import { Saira_Stencil_One } from 'next/font/google'
 import { PrimaryInputWSearchIcon } from "./primary-input";
 import { CartControl } from "./cart-control";
@@ -45,3 +44,5 @@ export function Header(props : HeaderProps) {
         </TagHeader>
     )
 }
+
+
